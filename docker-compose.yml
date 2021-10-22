@@ -14,7 +14,7 @@ services:
     environment:
       NGINX_HOST: "lmfaasaas.com"
       NGINX_PORT: "8080"
-    labels:
+    # labels:
       # kompose.service.type: LoadBalancer
     volumes:
       - ./testfile.txt:/var/www/html/testfile.txt
