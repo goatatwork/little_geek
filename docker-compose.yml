@@ -1,0 +1,20 @@
+version: "3"
+
+services:
+  nginx:
+    image: nginxinc/nginx-unprivileged:1.21
+    deploy:
+      mode: replicated
+      replicas: 1
+    #   placement:
+    #     constraints:
+    #       - "org.sniper.node.architecture==x86_64"
+    ports:
+      - "8888:8080"
+    environment:
+      NGINX_HOST: "lmfaasaas.com"
+      NGINX_PORT: "8080"
+    labels:
+      # kompose.service.type: LoadBalancer
+    volumes:
+      - ./testfile.txt:/var/www/html/testfile.txt
