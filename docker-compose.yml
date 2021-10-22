@@ -16,5 +16,5 @@ services:
       NGINX_PORT: "8080"
     # labels:
       # kompose.service.type: LoadBalancer
-    volumes:
-      - ./testfile.txt:/var/www/html/testfile.txt
+    # volumes:
+      # - ./testfile.txt:/var/www/html/testfile.txt
